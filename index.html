@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Speakers Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* container containing the whole body */
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 100%vw;
+            height: 100%vh;
+            background: gainsboro;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /*header containing the title/top of page*/
+
+        .top{
+            display: flex;
+            flex-direction: column; 
+            width: 50%vw; 
+            margin: 15px;
+            text-align: center;
+            align-items: center; 
+            flex-wrap: wrap;
+            text-wrap: wrap;
+            
+            
+            
+
+        }
+
+        /* purpose of page, under title */
+
+        .under{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }  
+
+        /* container for profiles, contains shared values */
+
+        .profiles-c{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            color: #251134;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+        }
+
+        .profile{
+            display: flex;
+            flex-direction: column;
+            background: #ffff;
+            width: 200px;
+            height: 400px;
+            box-shadow: 0 4px 5px rgb(156, 156, 156);
+            border-radius: 5px;
+            
+
+        }
+
+        /* JD profile photo*/
+        
+        .jd{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(140deg, #432371, #faae7b);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* MR profile photo*/
+        
+        .mr{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(-20deg, #bd4733, #195dba);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* AC profile photo*/
+        
+        .ac{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(140deg, #42047e , #07f49e);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* SP profile photo*/
+
+        .sp{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(-20deg, #f44369, #3e3b92);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* DK profile photo*/
+        
+        .dk{
+            display: flex;
+            width: 100% ;
+            height: 50%;
+            background: linear-gradient(-20deg, #ef745c, #34073d);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* LJ profile photo */
+
+        .lj{
+            display: flex;
+            width: 100% ;
+            height: 50%;
+            background: linear-gradient(140deg, #074170, #7e9012);
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* full names, located under profile picture */
+
+        .names{
+            display: flex;
+            margin: 8px 0 0 10px;
+            
+        }
+
+        /* Job titles, located under full names */
+
+        .position{
+            display: flex;
+            margin: 5px;
+            color: #439CFB;
+            font-size: smaller;
+            
+        }
+
+        /* employer, located under position/job title */
+
+        .company{
+            display: flex;
+            margin: 6px;
+            color: gray;
+            font-size: 10px;
+
+        }
+
+        /* descriptions, located under company */
+
+        .desc{
+            display: flex;
+            font-size: 10px;
+            margin: 10px;
+            color: #251134;
+
+        }
+
+        /* container for specialties */
+
+        .skills-1{
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            width: 160px;
+            height: 15px;
+            gap: 5px;
+            font-size: xx-small;
+
+            
+            
+
+        }
+
+        /* specialties/skills, located under description */
+
+        .specialties{
+            display: flex;
+            flex: 0 1 80px;
+            flex-direction: row;
+            background: #a3b0e2;
+            color: #3640FF;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+
+        }
+
+        /* container for contact info/links */
+
+        .contact{
+            display: flex;
+            flex-direction: row;
+            margin: 15px;
+            gap: 15px;
+
+        }
+
+        /* contact info/connections, located under specialties */ 
+        
+
+        .info{
+            display: flex;
+            flex-direction: row;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background:gainsboro;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #3640FF;
+
+        }
+    
+
+    </style>
+</head>
+<body>
+    <!--container containing the whole body-->
+    <div class="container">
+
+        <!--header containing the title/top of page-->
+
+        <header class="top">
+
+            <h1>Conference Speakers 2025</h1>
+
+            <!-- purpose of page, under title -->
+
+            <p class="under">Meet our amazing lineup of industry experts</p>
+        </header>
+
+        <!--main containing the profiles-->
+        <main class="profiles-c">
+
+            <!-- JD Profile -->
+
+            <div class="profile">
+                <div class="jd">
+                    JD
+                </div>
+                <h3 class="names">John Davis</h3>
+                <p class="position">Chief Technology Officer</p>
+                <p class="company">TechCorp Inc.</p>
+                <p class="desc">Expert in cloud architecture with 15&plus; years of experience building scalable systems.</p>
+
+                <section class="skills-1">
+                    <div class="specialties">Cloud</div>
+                    <div class="specialties">DevOps</div>
+                    <div class="specialties">AI</div>
+
+                </section>
+                <div class="contact">
+                    <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+                </div>
+
+            </div>
+
+            <!-- MR Profile -->
+
+            <div class="profile">
+                <div class="mr">
+                    MR
+                </div>
+                <h3 class="names">Maria Rodriguez</h3>
+                <p class="position">Design Director</p>
+                <p class="company">Creative Studios</p>
+                <p class="desc">Award&dash;winning designer specializing in user experience and accessibility.</p>
+
+                 <section class="skills-1">
+                    <div class="specialties">UX Design</div>
+                    <div class="specialties">Accessibility</div>
+                </section>
+                <div class="contact">
+                    <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+                </div>
+
+            </div>
+
+            <!--AC Profile  -->
+
+            <div class="profile">
+                <div class="ac">
+                    AC
+                </div>
+                <h3 class="names">Alex Chen</h3>
+                <p class="position">Data Scientist</p>
+                <p class="company">DataWorks</p>
+                <p class="desc">Leading researcher in machine learning and predictive analytics.</p>
+
+                    <section class="skills-1">
+                        <div class="specialties">Machine Learning</div>
+                        <div class="specialties">Data Science</div>
+
+                    </section>
+                <div class="contact">
+                    <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+                </div>
+
+            </div>
+
+            <!-- SP Profile -->
+
+            <div class="profile">
+                <div class="sp">
+                    SP
+                </div>
+                <h3 class="names">Sarah Park</h3>
+                <p class="position">Security Expert</p>
+                <p class="company">SecureNet</p>
+                <p class="desc">Cybersecurity specialist focused on protecting digital infrastructure.</p>
+
+                  <section class="skills-1">
+                    <div class="specialties">Cybersecurity</div>
+                    <div class="specialties">Privacy</div>
+
+                </section>
+                <div class="contact">
+                     <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+                </div>
+            </div>
+
+            <!-- DK Profile -->
+
+            <div class="profile">
+                <div class="dk">
+                    DK
+                </div>
+                <h3 class="names">David Kim</h3>
+                <p class="position">Mobile Developer</p>
+                <p class="company">AppVentures</p>
+                <p class="desc">Pioneer in mobile app development and cross&dash;platform solutions.</p>
+
+                  <section class="skills-1">
+                    <div class="specialties">Mobile Dev</div>
+                    <div class="specialties">React Native</div>
+
+                </section>
+
+                <div class="contact">
+                     <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+                </div>
+
+            </div>
+
+            <!-- LJ Profile -->
+
+            <div class="profile">
+                <div class="lj">
+                    LJ
+                </div>
+                <h3 class="names">Lisa Johnson</h3>
+                <p class="position">Product Manager</p>
+                <p class="company">InnovateLabs</p>
+                <p class="desc">Product Strategist with a track record of launching successful products.</p>
+
+                  <section class="skills-1">
+
+                    <div class="specialties">Product</div>
+                    <div class="specialties">Strategy</div>
+
+                </section>
+
+                <div class="contact">
+                    <div class="info">&xopf;</div>
+                    <div class="info">in</div>
+                    <div class="info">⚡</div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    
+</body>
+</html>
